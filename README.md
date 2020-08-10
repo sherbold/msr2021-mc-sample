@@ -2,7 +2,7 @@
 
 This repository contains sample data and analysis scripts for our MSR mining challenge application. The sample consists of our data for one of the smaller projects in our database, i.e., [Apache Giraph](https://giraph.apache.org/).
 
-(Rough draft)
+Below, we describe how our data can be loaded and the example be executed. If you just want to look at the example, you can just [view it directly here on Github](https://github.com/sherbold/msr2021-mc-sample/blob/master/MSR-MC2021-Sample.ipynb). 
 
 ## Preparation of the Database
 
@@ -21,13 +21,23 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl daemon-reload
 sudo systemctl start mongod
-cd ~
 wget https://user.informatik.uni-goettingen.de/~sherbol/smartshark_sample.agz
-mongorestore smartshark_sample.agz
+mongorestore --gzip --archive=smartshark_sample.agz
 ```
 
 ## Running the Notebook
 
-- Create venv
-- Install requirements (missing)
-- Run `jupyter notebook` and open in browser
+To run our python code, you only need our library [pycoshark](https://github.com/smartshark/pycoSHARK) and [Jupyter Lab](https://jupyter.org/install) (or any other app, that can work with Jupyter Notebooks). 
+
+For example, you could run the following commands in your Ubuntu 18.04 machine to get everything running.
+
+```
+sudo apt-get install python3-venv build-essential python3-dev
+git clone https://github.com/sherbold/msr2021-mc-sample.git
+cd msr2021-mc-sample/
+python3 -m venv venv
+source venv/bin/activate
+pip install pycoshark jupyterlab
+```
+
+You can just open the notebook in the browser and run our example.
