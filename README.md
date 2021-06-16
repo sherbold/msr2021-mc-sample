@@ -1,8 +1,10 @@
-# SmartSHARK MSR 2021 - Mining Challenge Application
+# SmartSHARK MSR 2022 - Mining Challenge Application
 
 This repository contains sample data and analysis scripts for our MSR mining challenge application. The sample consists of our data for one of the smaller projects in our database, i.e., [Apache Giraph](https://giraph.apache.org/).
 
-Below, we describe how our data can be loaded and the example be executed. If you just want to look at the example, you can just [view it directly here on Github](https://github.com/sherbold/msr2021-mc-sample/blob/master/MSR-MC2021-Sample.ipynb). 
+Below, we describe how our data can be loaded and the example be executed. If you just want to look at the example, you can just [view it directly here on Github](https://github.com/sherbold/msr2022-mc-sample/blob/master/MSR-MC2022-Sample.ipynb). 
+
+You can find our guide for using the full database [here](https://github.com/smartshark/usage-examples).
 
 ## Preparation of the Database
 
@@ -33,8 +35,8 @@ For example, you could run the following commands in your Ubuntu 18.04 machine t
 
 ```
 sudo apt-get install python3-venv build-essential python3-dev
-git clone https://github.com/sherbold/msr2021-mc-sample.git
-cd msr2021-mc-sample/
+git clone https://github.com/sherbold/msr2022-mc-sample.git
+cd msr2022-mc-sample/
 python3 -m venv venv
 source venv/bin/activate
 pip install pycoshark jupyterlab
